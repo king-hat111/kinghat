@@ -2,7 +2,6 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>king hat</title>
   <style>
     html {
@@ -360,7 +359,7 @@
       KING HAT
     </div>
     <nav>
-      <a href="javascript:void(0)" onclick="openModal()">Język / Language</a>
+      <a href="javascript:void(0)" onclick="OtworzOkienko()">Język / Language</a>
     </nav>
   </div>
   <div class="sekcjaglowna">
@@ -406,12 +405,12 @@
       <p>&copy; Bartosz Świątecki, king hat. Wszystkie prawa zastrzeżone</p>
     </div>
   </div>
-  <div id="myModal" class="okno">
+  <div id="OknoZmianyJezyka" class="okno">
     <div class="zawartoscokna">
-      <span class="zamknji" onclick="closeModal()">&times;</span>
+      <span class="zamknji" onclick="ZamknjiOkienko()">&times;</span>
       <h2>Wybierz język / Select Language</h2>
-      <button class="language-option" onclick="changeLanguageToPolish()">Polski</button>
-      <button class="language-option" onclick="changeLanguageToEnglish()">English</button>
+      <button class="language-option" onclick="ZmienJezykNaPolski()">Polski</button>
+      <button class="language-option" onclick="ZmienJezykNaAngielski()">English</button>
     </div>
   </div>
   <script>
@@ -422,17 +421,17 @@
     }
     let jezykencherValue = getCookie('jezykencher');
     if (jezykencherValue === '0') {
-      changeLanguageToPolish();
+       ZmienJezykNaPolski();
     } else if (jezykencherValue === '1') {
-      changeLanguageToEnglish();
+       ZmienJezykNaAngielski();
     }
-    function openModal() {
-      document.getElementById('myModal').style.display = 'block';
+    function OtworzOkienko() {
+      document.getElementById('OknoZmianyJezyka').style.display = 'block';
     }
-    function closeModal() {
-      document.getElementById('myModal').style.display = 'none';
+    function ZamknjiOkienko() {
+      document.getElementById('OknoZmianyJezyka').style.display = 'none';
     }
-    function changeLanguageToPolish() {
+    function ZmienJezykNaPolski() {
       document.cookie = "jezykencher=0; path=/; expires=" + new Date(9999, 0, 1).toUTCString();
       document.querySelector('.sekcjaglowna h1 span:nth-of-type(1)').innerText = 'Witaj';
       document.querySelector('.sekcjaglowna h1 span:nth-of-type(2)').innerText = 'Na Stronie';
@@ -448,9 +447,9 @@
       document.querySelector('.elemencik:nth-of-type(2) .opisprojektu').innerText = 'Gra logiczna, która polega na układaniu laserów w odpowiedni sposób';
       document.querySelector('.elemencik:nth-of-type(2) .btnprojektu').innerText = 'Pobierz';
       document.querySelector('.stopka p').innerHTML = '&copy; Bartosz Świątecki, king hat. Wszystkie prawa zastrzeżone';
-      closeModal();
+      ZamknjiOkienko();
     }
-    function changeLanguageToEnglish() {
+    function ZmienJezykNaAngielski() {
       document.cookie = "jezykencher=1; path=/; expires=" + new Date(9999, 0, 1).toUTCString();
       document.querySelector('.sekcjaglowna h1 span:nth-of-type(1)').innerText = 'Welcome';
       document.querySelector('.sekcjaglowna h1 span:nth-of-type(2)').innerText = 'On the Website of';
@@ -466,7 +465,7 @@
       document.querySelector('.elemencik:nth-of-type(2) .opisprojektu').innerText = 'A logic game where you arrange lasers in the correct way';
       document.querySelector('.elemencik:nth-of-type(2) .btnprojektu').innerText = 'Download';
       document.querySelector('.stopka p').innerHTML = '&copy; Bartosz Świątecki, king hat. All rights reserved';
-      closeModal();
+      ZamknjiOkienko();
     }
   </script>
 </body>
