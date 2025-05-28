@@ -127,7 +127,7 @@ function PrzestanoNajezdzacNaPrzyciskPobierzProjekt2()
 
 function PobierzProjektDrugi()
 {
-  movetopage("thiswindow", "3dLasers.zip")
+  movetopage("thiswindow", "https://kinghat.itch.io/3dlasers")
 }
 
 
