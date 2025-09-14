@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en, pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>king hat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="description" content="Witaj na mojej stronie! Nazywam się Bartek a w internecie jestem znany jako kinghat! Welcome to my website! My name is Bartek and I am known on the Internet as kinghat!">
+    <style>
+        @font-face 
+        {
+            font-family: 'CzcionkaJeden';
+            src: url('Roboto.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body 
+        {
+            margin: 0px;
+            padding: 0px;
+            background-color: #424242;
+            font-family: 'CzcionkaJeden', sans-serif;
+        }
+
+        .paseknawigacyjny 
+        {
+            background-color: rgb(36, 36, 36);
+            min-height: 96vh;
+            width: 400px;
+            border-radius: 20px;
+            flex: 0 0 400px;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 2vh;
+            left: 20px;
+        }
+
+        .paseknawigacyjnytrzy 
+        {
+            background-color: rgb(36, 36, 36);
+            min-height: 96vh;
+            width: 400px;
+            border-radius: 20px;
+            flex: 0 0 400px;
+            margin-top: 2vh;
+            margin-left: 20px;
+            display: none;
+        }
+
+        main 
+        {
+            flex: 1 1 0;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+        }
+
+
+        aside 
+        {
+            margin-right: 20px;
+        }
+
+        .paseknawigacyjny img 
+        {
+            height: 120px;
+            width: 120px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            margin-left: 140px;
+            margin-top: 20px;
+        }
+
+        .paseknawigacyjny > h1 
+        {
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            margin: 0 0 10px 0;
+        }
+
+        .paseknawigacyjny > h2 
+        {
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            margin: 0 0 30px 0;
+            padding: 0 20px;
+            font-weight: normal;
+        }
+
+        .paseknawigacyjnytrzy > h1 
+        {
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            margin: 0 0 10px 0;
+        }
+
+        .paseknawigacyjnytrzy > h2 
+        {
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            margin: 0 0 30px 0;
+            padding: 0 20px;
+            font-weight: normal;
+        }
+
+        .przyciskpaskanawigacyjnegoomnie
+        {
+            text-decoration: none;
+            display: block;
+            background-color: rgb(58, 58, 58);
+            color: rgb(177, 230, 255);
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            margin: 8px;
+        }
+
+        .przyciskpaskanawigacyjnegoomnie:hover
+        {
+            cursor: default;
+        }
+
+        .przyciskpaskanawigacyjnego
+        {
+            text-decoration: none;
+            color: white;
+            background-color: rgb(77, 76, 76);
+            padding: 12px 20px;
+            display: block;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            margin: 8px;
+        }
+
+        .przyciskpaskanawigacyjnego:hover
+        {
+            background-color: rgb(58, 58, 58);
+            color: rgb(177, 230, 255);
+            cursor: pointer;
+        }
+
+        .przyciskzobaczmojeprojekty
+        {
+            text-decoration: none;
+            color: white;
+            display: table;
+            background-color: rgb(77, 76, 76);
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+            transition: background-color 0.4s ease, color 0.4s ease;
+            margin: 0 auto;
+        }
+
+        .przyciskzobaczmojeprojekty:hover
+        {
+            background-color: rgb(58, 58, 58);
+            color: rgb(177, 230, 255);
+            cursor: pointer;
+        }
+
+        .blokomnie
+        {
+            margin-left: 2vw;
+            margin-right: 2vw;
+            width: calc(100% - 2vw);
+            margin-top: 2vh;
+            border-radius: 20px;
+            background-color: rgb(36, 36, 36);;
+        }
+
+        .zmianajezyka
+        {
+            margin-top: auto;
+            margin-bottom: 10px;
+            text-decoration: none;
+            display: block;
+            color: rgb(255, 255, 255);
+            padding: 8px;
+            background-color: #4e4e4e;
+            align-self: center;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .zmianajezyka:hover
+        {
+            color: rgb(187, 187, 187);
+            background-color: #363636;
+            cursor: pointer;
+        }
+
+        .zmianajezykanawysunietymmenuhamburgera
+        {
+            display: block;         
+            text-decoration: none;
+            background-color: rgb(77, 76, 76);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            text-align: center;
+            margin-left: 100px;
+            margin-right: 100px;
+            transition: all 0.2s ease;
+        }
+
+        .zmianajezykanawysunietymmenuhamburgera:hover
+        {
+            color: rgb(187, 187, 187);
+            background-color: #363636;
+            cursor: pointer;
+        }
+
+        .blokomnie > h1 
+        {
+            color: white;
+            font-size: 25px;
+            padding: 20px;
+            margin-left: 20px;
+        }
+
+        .blokomnie > h2 
+        {
+            color: white;
+            font-size: 18px;
+            margin-left: 20px;
+            padding: 0 20px 20px 20px;
+            font-weight: normal;
+        }
+
+        .mojekonta 
+        {
+
+            margin-left: 2vw;
+            margin-top: 2vh;
+            border-radius: 20px;
+            background-color: rgb(36, 36, 36);
+            padding: 20px;
+        }
+
+        .mojekonta > h1 
+        {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+            margin-left: 0;
+        }
+
+        .kontalista 
+        {
+            padding: 0;
+            margin: 0;
+        }
+
+        .kontalista .elementlistykont 
+        {
+            background-color: #1e1e1e;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+        }
+
+        .kontalista img 
+        {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .kontoinfo 
+        {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .kontoinfo span 
+        {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .kontoinfo a 
+        {
+            color: #4ea1ff;
+            text-decoration: none;
+            font-size: 14px;
+            word-break: break-all;
+        }
+
+        .kontoinfo a:hover 
+        {
+            text-decoration: underline;
+        }
+
+        .kontenerglowny
+        {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .blokomnieimojekonta
+        {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .zdjeciakonsoli
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .zdjeciakonsoli div 
+        {
+            width: 250px;
+            text-align: center;
+        }
+
+        .zdjeciakonsoli img 
+        {
+            width: 100%;
+            height: auto;
+            border-radius: 30px;
+        }
+
+        .zdjeciakonsoli img:hover
+        {
+            cursor: pointer;
+        }
+
+        .zdjeciakonsoli p
+        {
+            color: white;
+        }
+
+        #totyleomniewmain
+        {
+            display: block;
+            margin-bottom: 2vh;
+        }
+
+        #totyleomniewaside
+        {
+            display: none;
+            margin-bottom: 2vh;
+        }
+
+        .paseknawigacyjnydwa
+        {
+            display: none
+        }
+
+        .pasekhamburgera
+        {
+            background-color: white;
+            height: 6px;
+            border-radius: 3px;
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .pasekhamburgera:last-child 
+        {
+            margin-bottom: 0;
+        }
+
+        .wysokoscpaskanawigacyjnegodwa
+        {
+            background-color: rgba(116, 116, 116, 0);
+            width: 100%;
+            height: 60px;
+            display: none;
+        }
+
+        #przyciskhamburgermenu
+        {
+            width: fit-content;
+            height: fit-content;
+            margin-top: 10px;
+            margin-left: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        #przyciskhamburgermenu:hover
+        {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        #przyciskhamburgermenu:hover .pasekhamburgera
+        {
+            background-color: #7a8592;
+        }
+
+        #przyciskhamburgermenu .pasekhamburgera 
+        {
+            transition: all 0.3s ease;
+        }
+
+        .szerokoscpaskanawigacyjnego
+        {
+            height: 96vh;
+            width: 400px;
+            margin-left: 20px;
+            display: block;
+        }
+
+        .wysunietemenuhamburgera
+        {
+            display: none;
+        }
+        
+        .obiektzjakimskolorem
+        {
+            position: absolute;
+            background-color: rgba(27, 27, 27, 0);
+            height: 1px;
+            width: 1px;
+        }
+
+        .przewijane 
+        {
+            max-height: 60vh;
+            width: 100%;
+            overflow: auto;
+        }
+
+        .wyborekjezyka 
+        {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+            z-index: 1500;
+            overflow: auto;
+            scrollbar-color: #444 #1e1e1e;
+        }
+
+        .wyborekjezyka > h1 
+        {
+            color: white;
+            font-size: 40px;
+            margin-top: 200px;
+        }
+
+        .wyborekdivykolosiebie 
+        {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .wyborekdivykolosiebie > div 
+        {
+            background-color: #3a3a3a;
+            color: white;
+            padding: 60px 100px;
+            border-radius: 20px;
+            border: 3px solid #555;
+            font-size: 22px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            margin-right: 30px;
+            margin-left: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .wyborekdivykolosiebie > div:hover 
+        {
+            background-color: #1f1f1f;
+            color: #97d5ff;
+            transform: scale(1.05);
+        }
+
+        .blokzmoimiprojektami 
+        {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            flex: 1 1 0;
+            margin: 2vh 2vw;
+            border-radius: 25px;
+            padding: 30px 20px;
+            background-color: rgb(36, 36, 36);
+        }
+
+        .blokzmoimiprojektami > h1 
+        {
+            color: #ffffff;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 3px;
+        }
+        
+        .blokzmoimiprojektami > h2
+        {
+            color: #ffffff;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .blokprojektu 
+        {
+            background-color: #2a2a2a;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 20px 60px;
+            border-radius: 30px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+            transition: all 0.2s ease;
+        }
+
+        .blokprojektu:hover 
+        {
+            transform: translateY(-5px);
+            cursor: pointer;
+        }
+
+        .blokprojektu img 
+        {
+            width: 230px;
+            height: 185px;
+            border-radius: 20px;
+            margin: 15px;
+        }
+
+        .obiektzkolumnem 
+        {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .obiektzkolumnemwycentrowane 
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .obiektzkolumnem > h1 
+        {
+            color: #ffffff;
+            font-size: 28px;
+            margin: 10px;
+        }
+
+        .obiektzkolumnem > h2 
+        {
+            color: #d1d1d1;
+            font-size: 18px;
+            margin: 10px;
+        }
+
+        .przycisklistyprojektow 
+        {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #4d4c4c;
+            padding: 12px 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .przycisklistyprojektow:hover 
+        {
+            background-color: #3a3a3a;
+            color: #b1e6ff;
+            cursor: pointer;
+        }
+
+        .ukryty 
+        {
+            display: none !important;
+        }
+
+        @media(max-width: 1450px) 
+        {
+            aside
+            {
+                flex: 1 1 0;
+                min-width: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+                margin-right: 0px;
+                margin-top: 2vh;
+            }
+
+            .paseknawigacyjny
+            {
+                display: flex;
+            }
+
+            .szerokoscpaskanawigacyjnego
+            {
+                display: block;
+            }
+
+            .blokomnieimojekonta
+            {
+                display: block;
+            }
+
+            .blokomnie
+            {
+                margin-left: 2vw;
+                margin-right: 2vw;
+                width: calc(100% - 4vw);
+                margin-top: 2vh;
+                border-radius: 20px;
+                background-color: rgb(36, 36, 36);;
+            }
+
+            #totyleomniewmain
+            {
+                display: none;
+            }
+
+            #totyleomniewaside
+            {
+                display: block;
+            }
+
+            .mojekonta 
+            {
+                margin-left: 2vw;
+                margin-right: 2vw;
+                margin-top: 2vh;
+                border-radius: 20px;
+                background-color: rgb(36, 36, 36);
+                padding: 20px;
+            }
+
+            .przyciskpaskanawigacyjnegoomnie
+            {
+                display: block;
+            }
+
+            .przyciskpaskanawigacyjnego
+            {
+                display: block;
+            }
+
+            .zmianajezyka
+            {
+                display: block;
+            }
+
+            .paseknawigacyjnydwa
+            {
+                display: none;
+            }
+
+            .wysokoscpaskanawigacyjnegodwa
+            {
+                display: none;
+            }
+
+            .paseknawigacyjnytrzy
+            {
+                display: none;
+            }
+            
+            .wysunietemenuhamburgera
+            {
+                display: none;
+            }
+
+            .obiektzjakimskolorem
+            {
+                position: absolute;
+                background-color: rgba(27, 27, 27, 0);
+                height: 1px;
+                width: 1px;
+            }
+        }
+
+        @media(max-width: 1024px) 
+        {
+            .blokprojektu 
+            {
+                flex-direction: column;
+                margin: 20px 20px;
+                padding: 15px;
+            }
+
+            .blokprojektu img 
+            {
+                width: 100%;
+                height: auto;
+                max-width: 400px;
+                margin: 10px 0;
+            }
+
+            .obiektzkolumnem, .obiektzkolumnemwycentrowane 
+            {
+                margin: 10px 0;
+                text-align: center;
+                align-items: center;
+            }
+
+            .obiektzkolumnem > h1 
+            {
+                font-size: 24px;
+            }
+
+            .obiektzkolumnem > h2 
+            {
+                font-size: 16px;
+            }
+        }
+
+        @media(max-width: 1000px) 
+        {
+            #totyleomniewmain
+            {
+                display: none;
+            }
+
+            .szerokoscpaskanawigacyjnego
+            {
+                display: none;
+            }
+
+            #totyleomniewaside
+            {
+                display: block;
+            }
+
+            .kontenerglowny {
+                flex-direction: column;
+            }
+
+            .paseknawigacyjnytrzy
+            {
+                display: flex;
+                flex-direction: column;
+                min-height: auto;
+                margin-left: 2vw;
+                margin-right: 2vw;
+                width: calc(100% - 4vw);
+            }
+
+            .paseknawigacyjnytrzy img 
+            {
+                height: 120px;
+                width: 120px;
+                margin-bottom: 20px;
+                border-radius: 50%;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                margin-top: 20px;
+            }
+
+            .przyciskpaskanawigacyjnegoomnie
+            {
+                display: none;
+            }
+
+            .przyciskpaskanawigacyjnego
+            {
+                display: none;
+            }
+
+            .zmianajezyka
+            {
+                display: none;
+            }
+
+            .paseknawigacyjnydwa
+            {
+                background-color: rgba(19, 17, 17, 0.863);
+                width: 100%;
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000; 
+                backdrop-filter: blur(2px);
+                -webkit-backdrop-filter: blur(2px);
+            }
+
+            .wysokoscpaskanawigacyjnegodwa
+            {
+                display: block;
+            }
+
+            .paseknawigacyjny
+            {
+                display: none;
+            }
+
+            .wysunietemenuhamburgera 
+            {
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: rgba(19, 17, 17, 0.863);
+                color: white;
+                padding: 15px 20px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+                z-index: 999;
+            }
+
+            .przewijane > h1 
+            {
+                margin: 0 0 20px 0;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .wysunietemenuhamburgeraprzycisk 
+            {
+                display: block;         
+                text-decoration: none;
+                background-color: rgb(77, 76, 76);
+                color: white;
+                padding: 8px 16px;
+                border-radius: 6px;
+                margin-bottom: 15px;
+                font-size: 16px;
+                text-align: center;
+                margin-left: 100px;
+                margin-right: 100px;
+                transition: all 0.2s ease;
+            }
+
+            .wysunietemenuhamburgeraprzyciskwybrany
+            {
+                display: block;         
+                text-decoration: none;
+                background-color: rgb(58, 58, 58);
+                color: rgb(177, 230, 255);
+                padding: 8px 16px;
+                border-radius: 6px;
+                margin-bottom: 15px;
+                font-size: 16px;
+                text-align: center;
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+
+            .wysunietemenuhamburgeraprzyciskwybrany:hover
+            {
+                cursor: default;
+            }
+
+            .wysunietemenuhamburgeraprzycisk:hover 
+            {
+                background-color: rgb(58, 58, 58);
+                color: rgb(177, 230, 255);
+                cursor: pointer;
+            }
+
+            .obiektzjakimskolorem
+            {
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0);
+                height: 1px;
+                width: 1px;
+            }
+        }
+
+        @media(max-width: 744px)
+        {
+            .wyborekjezyka > h1 
+            {
+                font-size: 30px;
+                margin-top: 100px;
+            }
+
+            .wyborekdivykolosiebie 
+            {
+                margin-top: 15px;
+            }
+
+            .wyborekdivykolosiebie > div 
+            {
+                font-size: 15px;
+            }
+        }
+
+        @media(max-height: 600px) 
+        {
+            .blokzmoimiprojektami > h1 
+            {
+                font-size: 28px;
+            }
+
+            .blokzmoimiprojektami > h2 
+            {
+                font-size: 18px;
+            }
+
+            .przycisklistyprojektow 
+            {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            #totyleomniewmain
+            {
+                display: none;
+            }
+
+            .szerokoscpaskanawigacyjnego
+            {
+                display: none;
+            }
+
+            #totyleomniewaside
+            {
+                display: block;
+            }
+
+            .kontenerglowny 
+            {
+                flex-direction: column;
+            }
+
+            .paseknawigacyjnytrzy
+            {
+                display: flex;
+                flex-direction: column;
+                min-height: auto;
+                margin-left: 2vw;
+                margin-right: 2vw;
+                width: calc(100% - 4vw);
+            }
+
+            .paseknawigacyjnytrzy img 
+            {
+                height: 120px;
+                width: 120px;
+                margin-bottom: 20px;
+                border-radius: 50%;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                margin-top: 20px;
+            }
+
+            .przyciskpaskanawigacyjnegoomnie
+            {
+                display: none;
+            }
+
+            .przyciskpaskanawigacyjnego
+            {
+                display: none;
+            }
+
+            .zmianajezyka
+            {
+                display: none;
+            }
+
+            .paseknawigacyjnydwa
+            {
+                background-color: rgba(19, 17, 17, 0.863);
+                width: 100%;
+                height: 60px;
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 1000; 
+                backdrop-filter: blur(2px);
+                -webkit-backdrop-filter: blur(2px);
+            }
+
+            .wysokoscpaskanawigacyjnegodwa
+            {
+                display: block;
+            }
+
+            .paseknawigacyjny
+            {
+                display: none;
+            }
+
+            .wysunietemenuhamburgera 
+            {
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: rgba(19, 17, 17, 0.863);
+                color: white;
+                padding: 15px 20px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+                z-index: 999;
+            }
+
+            .przewijane > h1 
+            {
+                margin: 0 0 20px 0;
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .wysunietemenuhamburgeraprzycisk 
+            {
+                display: block;         
+                text-decoration: none;
+                background-color: rgb(77, 76, 76);
+                color: white;
+                padding: 8px 16px;
+                border-radius: 6px;
+                margin-bottom: 15px;
+                font-size: 16px;
+                text-align: center;
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+
+            .wysunietemenuhamburgeraprzyciskwybrany
+            {
+                display: block;         
+                text-decoration: none;
+                background-color: rgb(58, 58, 58);
+                color: rgb(177, 230, 255);
+                padding: 8px 16px;
+                border-radius: 6px;
+                margin-bottom: 15px;
+                font-size: 16px;
+                text-align: center;
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+
+            .wysunietemenuhamburgeraprzyciskwybrany:hover
+            {
+                cursor: default;
+            }
+
+            .wysunietemenuhamburgeraprzycisk:hover 
+            {
+                background-color: rgb(58, 58, 58);
+                color: rgb(177, 230, 255);
+                cursor: pointer;
+            }
+
+            .obiektzjakimskolorem
+            {
+                position: absolute;
+                background-color: rgba(0, 0, 0, 0);
+                height: 1px;
+                width: 1px;
+            }
+        }
+
+        @media(max-width: 556px)
+        {
+            .wyborekjezyka > h1 
+            {
+                font-size: 30px;
+                text-align: center;
+                margin-top: 100px;
+            }
+        }
+
+        @media(max-width: 500px) 
+        {
+            .wysunietemenuhamburgeraprzycisk
+            {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .wysunietemenuhamburgeraprzyciskwybrany
+            {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wyborekjezyka">
+        <h1>WYBIERZ JĘZYK / SELECT LANGUAGE</h1>
+        <div class="wyborekdivykolosiebie">
+            <div tabindex="0" onclick="NacisnietoPrzyciskPolski()">
+                <h2>Polski</h2>
+            </div>
+            <div tabindex="0" onclick="NacisnietoPrzyciskAngielski()">
+                <h2>English</h2>
+            </div>
+        </div>
+    </div>
+    <div class="obiektzjakimskolorem"></div>
+    <div class="wysokoscpaskanawigacyjnegodwa"></div>
+    <div class="paseknawigacyjnydwa">
+        <div onclick="NacisnietoPrzyciskHamburgerMenu()" role="link" tabindex="0" aria-label="Zobacz podstrony i opcje zmiany języka" id="przyciskhamburgermenu">
+            <div class="pasekhamburgera"></div>
+            <div class="pasekhamburgera"></div>
+            <div class="pasekhamburgera"></div>
+        </div>
+    </div>
+    <div class="wysunietemenuhamburgera">
+        <div class="przewijane">
+        <h1 id="tekstpierwszy">Podstrony:</h1>
+        <a id="tekstdrugi" role="link" tabindex="0" class="wysunietemenuhamburgeraprzyciskwybrany" onclick="ZobaczOMNie()">O mnie</a>
+        <a id="teksttrzeci" role="link" tabindex="0" class="wysunietemenuhamburgeraprzycisk" onclick="ZobaczMojeProjekty()">Moje projekty</a>
+        <a id="wymmwwdas" role="link" tabindex="0" onclick="OtworzOkienkoWyboruJezyczka()" class="wysunietemenuhamburgeraprzycisk">JĘZYK/LANGUAGE</a>
+    </div>
+    </div>
+    <div class="kontenerglowny">
+        <nav>
+            <div class="szerokoscpaskanawigacyjnego"></div>
+            <div class="paseknawigacyjny">
+                <img src="logocircle.png" alt="Logo"/>
+                <h1 id="tekstczwarty">Witaj na mojej stronie!</h1>
+                <h2 id="tekstpiaty">Nazywam się Bartosz Świątecki a w internecie jestem znany jako kinghat</h2>
+                <a id="tekstszosty" role="link" tabindex="0" class="przyciskpaskanawigacyjnegoomnie" onclick="ZobaczOMNie()">O mnie</a>
+                <a id="tekstsiodmy" role="link" tabindex="0" class="przyciskpaskanawigacyjnego" onclick="ZobaczMojeProjekty()">Moje projekty</a>
+                <a id="dwauhda" role="link" tabindex="0" onclick="OtworzOkienkoWyboruJezyczka()" style="font-size: 20px;" class="zmianajezyka">JĘZYK/LANGUAGE</a>
+            </div>
+            <div class="paseknawigacyjnytrzy">
+                <img src="logocircle.png" alt="Logo"/>
+                <h1 id="tekstosmy">Witaj na mojej stronie!</h1>
+                <h2 id="tekstdziewiaty">Nazywam się Bartosz Świątecki a w internecie jestem znany jako kinghat</h2>
+                <a id="tekstdziesiaty" role="link" tabindex="0" class="przyciskpaskanawigacyjnegoomnie" onclick="ZobaczOMNie()">O mnie</a>
+                <a id="tekstjedenasty" role="link" tabindex="0" class="przyciskpaskanawigacyjnego" onclick="ZobaczMojeProjekty()">Moje projekty</a>
+                <a id="jiujii" role="link" tabindex="0" onclick="OtworzOkienkoWyboruJezyczka()" style="font-size: 20px;" class="zmianajezyka">JĘZYK/LANGUAGE</a>
+            </div>
+        </nav>
+        <div id="dousunieciadwa" class="blokzmoimiprojektami">
+            <h1 id="tekstdwudziestysiodmy">Moje projekty</h1>
+            <h2 id="tekstdwudziestyosmy">Naciśnji na projekt który chcesz zobaczyć</h2>
+            <div id="wdwdwwdwdfr" class="blokprojektu" tabindex="0" role="link" onclick="window.open('hce.html', '_blank', 'noopener,noreferrer')">
+                <img style="width: 230px; height: 185px;" src="project1.png">
+                <div class="obiektzkolumnem">
+                    <h1 id="tekstdwudziestydziewiaty">HattyCryptographicEngine</h1>
+                    <h2 id="teksttrzydziesty">Jest to strona internetowa na której można w prosty sposób szyfrować i odszyfrowywać tekst oraz pliki, używając mojego autorskiego algorytmu szyfrowania.</h2>
+                </div>
+            </div>
+            <div id="fjfjpwp" class="blokprojektu" tabindex="0" role="link" onclick="window.open('https://kinghat.itch.io/3dlasers', '_blank', 'noopener,noreferrer')">
+                <img style="width: 250px; height: 190px;" src="project2.jpg">
+                <div class="obiektzkolumnem">
+                    <h1 id="teksttrzydziestypierwszy">Gra 3d Lasers</h1>
+                    <h2 id=teksttrzydziestydrugi>To wciągająca gra logiczna, w której Twoim zadaniem jest precyzyjne układanie laserów w odpowiedni sposób, aby aktywować różne mechanizmy i przechodzić do kolejnych poziomów.</h2>
+                </div>
+            </div>
+        </div>
+        <div id="dousuniecia" class="blokomnieimojekonta">
+            <main>
+                <div class="blokomnie">
+                    <h1 id="tekstdwunasty">O mnie</h1>
+                    <h2 id="teksttrzynasty">Witam na mojej stronie, mam na imię Bartek. Moja przygoda z programowaniem zaczęła się bardzo dawno od programowania mikrokontrolerów, ale teraz najbardziej lubię programowanie stron internetowych. Poza kodowaniem lubię sobie zagrać w szachy, nie jestem mistrzem ale idzie mi coraz lepiej.</h2>
+                </div>
+
+                
+                <div class="blokomnie">
+                    <h1 id="tekstczternasty">Od tego się wszystko zaczęło</h1>
+                    <h2 id="tekstpietnasty">Masz okazję przeglądać tą stronę internetową, bo nauczyłem się programować, a cała moja przygoda z programowaniem zaczęła się od tego co można zobaczyć poniżej, a zobaczyć można retro konsole do gier opartą na mikrokontrolerze atmega 328p którą zbudowałem w wieku 14 lat.</h2>
+                    <div class="zdjeciakonsoli">
+                        <div>
+                            <img tabindex="0" src="20250722_142328.jpg" alt="Konsola bez obudowy" onclick="NacisnietioNaZdjeciePierwsze()" id="zdjecie1">
+                            <p id="tekstszesnasty">Konsola bez obudowy</p>
+                        </div> 
+                        <div>
+                            <img tabindex="0" src="20250723_115215.jpg" alt="Konsola w obudowie" onclick="NacisnietioNaZdjecieDrugie()" id="zdjecie2">
+                            <p id="tekstsiedemnasty">Konsola w obudowie</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="totyleomniewmain" class="blokomnie">
+                    <h1 id="tekstosiemnasty">To tyle o mnie</h1>
+                    <h2 id="tekstdziewietnasty">To tyle jeśli chodzi o mnie, zapraszam do zobaczenia moich projektów.</h2>
+                    <a id="tekstdwudziesty" role="link" tabindex="0" class="przyciskzobaczmojeprojekty" onclick="ZobaczMojeProjekty()">Zobacz moje projekty</a>
+                    <br>
+                </div>
+            </main>
+            <aside>
+                <div class="mojekonta">
+                    <h1 id="tekstdwudziestypierwszy">Moje konta na poszczególnych platformach</h1>
+                    <div class="kontalista">
+                        <div class="elementlistykont">
+                            <img src="steamlogo.png" alt="Steam">
+                            <div class="kontoinfo">
+                                <span>Steam</span>
+                                <a id="llllahwdhaw" tabindex="0" href="https://steamcommunity.com/id/kinghat111/" target="_blank">https://steamcommunity.com/id/kinghat111/</a>
+                            </div>
+                        </div>
+                        <div class="elementlistykont">
+                            <img src="tiktoklogo.png" alt="TikTok">
+                            <div class="kontoinfo">
+                                <span>TikTok</span>
+                                <a id="hgtuhtuhgaaqq" tabindex="0" href="https://www.tiktok.com/@.king_hat111" target="_blank">https://www.tiktok.com/@.king_hat111</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blokkontaktu">
+                    <div class="mojekonta">
+                    <h1 id="tekstdwudziestydrugi">Kontakt</h1>
+                        <div class="kontalista">
+                            <div class="elementlistykont">
+                                <div class="kontoinfo">
+                                    <span id="tekstdwudziestytrzeci">Mój adres e-mail:</span>
+                                    <p style="color: rgb(177, 169, 169);">barteksw111@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="totyleomniewaside" class="blokomnie">
+                    <h1 id="tekstdwudziestyczwarty">To tyle o mnie</h1>
+                    <h2 id="tekstdwudziestypiaty">To tyle jeśli chodzi o mnie, zapraszam do zobaczenia moich projektów.</h2>
+                    <a id="tekstdwudziestyszosty" role="link" tabindex="0" class="przyciskzobaczmojeprojekty" onclick="ZobaczMojeProjekty()">Zobacz moje projekty</a>
+                    <br>
+                </div>
+            </aside>
+        </div>
+        
+    </div>
+
+<script>
+    let stronaglow = 1;
+
+    let pasekhamburgerka = document.getElementsByClassName("pasekhamburgera");
+    let menuotwarte = false;
+    let kontener = document.querySelector('.kontenerglowny');
+    let menu = document.querySelector('.wysunietemenuhamburgera');
+    let obiekt = document.querySelector('.obiektzjakimskolorem');
+    let animacjaWTrakcie = false;
+
+    function ZobaczMojeProjekty()
+    {
+        if(stronaglow === 1)
+        {
+            document.querySelector(".paseknawigacyjnytrzy").classList.add("ukryty");
+            window.scrollTo({top: 0,});
+            document.querySelector("#dousuniecia").classList.add("ukryty");
+            document.querySelector("#dousunieciadwa").style.display = "flex";
+            document.querySelector("#tekstdrugi").removeAttribute("class");
+            document.querySelector("#tekstdrugi").setAttribute("class", "wysunietemenuhamburgeraprzycisk");
+            document.querySelector("#teksttrzeci").removeAttribute("class");
+            document.querySelector("#teksttrzeci").setAttribute("class", "wysunietemenuhamburgeraprzyciskwybrany");
+            document.querySelector("#tekstszosty").removeAttribute("class");
+            document.querySelector("#tekstszosty").setAttribute("class", "przyciskpaskanawigacyjnego");
+            document.querySelector("#tekstsiodmy").removeAttribute("class");
+            document.querySelector("#tekstsiodmy").setAttribute("class", "przyciskpaskanawigacyjnegoomnie");
+            document.querySelector("#tekstdziesiaty").removeAttribute("class");
+            document.querySelector("#tekstdziesiaty").setAttribute("class", "przyciskpaskanawigacyjnego");
+            document.querySelector("#tekstjedenasty").removeAttribute("class");
+            document.querySelector("#tekstjedenasty").setAttribute("class", "przyciskpaskanawigacyjnegoomnie");
+            pasekhamburgerka[0].style.transform = "translateY(0) rotate(0)";
+            pasekhamburgerka[1].style.opacity = "1";
+            pasekhamburgerka[2].style.transform = "translateY(0) rotate(0)";
+            kontener.style.webkitFilter = '';
+            kontener.style.filter = '';
+            kontener.style.pointerEvents = '';
+            kontener.style.userSelect = "text";
+            kontener.style.webkitUserSelect = "text";
+            kontener.style.MozUserSelect = "text";
+            kontener.style.msUserSelect = "text";
+            document.body.style.overflow = "auto";
+            document.documentElement.style.overflow = "auto";
+            let przezroczystosc = 1;
+            menu.style.opacity = przezroczystosc;
+
+            let funkcjaintervalll = setInterval(function() 
+            {
+            if(przezroczystosc > 0)
+            {
+                przezroczystosc -= 0.05;
+            }
+            if(przezroczystosc <= 0) 
+            {
+                przezroczystosc = 0;
+                menu.style.display = 'none';
+                clearInterval(funkcjaintervalll);
+                document.getElementById("przyciskhamburgermenu").style.pointerEvents = 'auto';
+            }
+                menu.style.opacity = przezroczystosc;
+            }, 10);
+            menuotwarte = false;
+            stronaglow = 0;
+        }
+        else
+        {
+
+        }
+    }
+
+    function ZobaczOMNie()
+    {
+        if(stronaglow === 1)
+        {
+
+        }
+        else
+        {
+            document.querySelector(".paseknawigacyjnytrzy").classList.remove("ukryty");
+            window.scrollTo({top: 0,});
+            document.querySelector("#dousuniecia").classList.remove("ukryty");
+            document.querySelector("#dousunieciadwa").style.display = "none";
+            document.querySelector("#tekstdrugi").removeAttribute("class");
+            document.querySelector("#tekstdrugi").setAttribute("class", "wysunietemenuhamburgeraprzyciskwybrany");
+            document.querySelector("#teksttrzeci").removeAttribute("class");
+            document.querySelector("#teksttrzeci").setAttribute("class", "wysunietemenuhamburgeraprzycisk");
+            document.querySelector("#tekstszosty").removeAttribute("class");
+            document.querySelector("#tekstszosty").setAttribute("class", "przyciskpaskanawigacyjnegoomnie");
+            document.querySelector("#tekstsiodmy").removeAttribute("class");
+            document.querySelector("#tekstsiodmy").setAttribute("class", "przyciskpaskanawigacyjnego");
+            document.querySelector("#tekstdziesiaty").removeAttribute("class");
+            document.querySelector("#tekstdziesiaty").setAttribute("class", "przyciskpaskanawigacyjnegoomnie");
+            document.querySelector("#tekstjedenasty").removeAttribute("class");
+            document.querySelector("#tekstjedenasty").setAttribute("class", "przyciskpaskanawigacyjnego");
+            pasekhamburgerka[0].style.transform = "translateY(0) rotate(0)";
+            pasekhamburgerka[1].style.opacity = "1";
+            pasekhamburgerka[2].style.transform = "translateY(0) rotate(0)";
+            kontener.style.webkitFilter = '';
+            kontener.style.filter = '';
+            kontener.style.pointerEvents = '';
+            kontener.style.userSelect = "text";
+            kontener.style.webkitUserSelect = "text";
+            kontener.style.MozUserSelect = "text";
+            kontener.style.msUserSelect = "text";
+            document.body.style.overflow = "auto";
+            document.documentElement.style.overflow = "auto";
+            let przezroczystosc = 1;
+            menu.style.opacity = przezroczystosc;
+
+            let funkcjaintervalll = setInterval(function() 
+            {
+            if(przezroczystosc > 0)
+            {
+                przezroczystosc -= 0.05;
+            }
+            if(przezroczystosc <= 0) 
+            {
+                przezroczystosc = 0;
+                menu.style.display = 'none';
+                clearInterval(funkcjaintervalll);
+                document.getElementById("przyciskhamburgermenu").style.pointerEvents = 'auto';
+            }
+                menu.style.opacity = przezroczystosc;
+            }, 10);
+            menuotwarte = false;
+            stronaglow = 1;
+        }
+    }
+
+    function UstawJezykNaPolski()
+    {
+        document.querySelector("#przyciskhamburgermenu").removeAttribute("aria-label")
+        document.querySelector("#przyciskhamburgermenu").setAttribute("aria-label", "Zobacz podstrony i opcje zmiany języka");
+        document.querySelector("#tekstpierwszy").innerHTML = "Podstrony:";
+        document.querySelector("#tekstdrugi").innerHTML = "O mnie";
+        document.querySelector("#teksttrzeci").innerHTML = "Moje projekty";
+        document.querySelector("#tekstczwarty").innerHTML = "Witaj na mojej stronie!";
+        document.querySelector("#tekstpiaty").innerHTML = "Nazywam się Bartosz Świątecki a w internecie jestem znany jako kinghat";
+        document.querySelector("#tekstszosty").innerHTML = "O mnie";
+        document.querySelector("#tekstsiodmy").innerHTML = "Moje projekty";
+        document.querySelector("#tekstosmy").innerHTML = "Witaj na mojej stronie!";
+        document.querySelector("#tekstdziewiaty").innerHTML = "Nazywam się Bartosz Świątecki a w internecie jestem znany jako kinghat";
+        document.querySelector("#tekstdziesiaty").innerHTML = "O mnie";
+        document.querySelector("#tekstjedenasty").innerHTML = "Moje projekty";
+        document.querySelector("#tekstdwunasty").innerHTML = "O mnie";
+        document.querySelector("#teksttrzynasty").innerHTML = "Witam na mojej stronie, mam na imię Bartek. Moja przygoda z programowaniem zaczęła się bardzo dawno od programowania mikrokontrolerów, ale teraz najbardziej lubię programowanie stron internetowych. Poza kodowaniem lubię sobie zagrać w szachy, nie jestem mistrzem ale idzie mi coraz lepiej.";
+        document.querySelector("#tekstczternasty").innerHTML = "Od tego się wszystko zaczęło";
+        document.querySelector("#tekstpietnasty").innerHTML = "Masz okazję przeglądać tą stronę internetową, bo nauczyłem się programować, a cała moja przygoda z programowaniem zaczęła się od tego co można zobaczyć poniżej, a zobaczyć można retro konsole do gier opartą na mikrokontrolerze atmega 328p którą zbudowałem w wieku 14 lat.";
+        document.querySelector("#tekstszesnasty").innerHTML = "Konsola bez obudowy";
+        document.querySelector("#tekstsiedemnasty").innerHTML = "Konsola w obudowie";
+        document.querySelector("#tekstosiemnasty").innerHTML = "To tyle o mnie";
+        document.querySelector("#tekstdziewietnasty").innerHTML = "To tyle jeśli chodzi o mnie, zapraszam do zobaczenia moich projektów.";
+        document.querySelector("#tekstdwudziesty").innerHTML = "Zobacz moje projekty";
+        document.querySelector("#tekstdwudziestypierwszy").innerHTML = "Moje konta na poszczególnych platformach";
+        document.querySelector("#tekstdwudziestydrugi").innerHTML = "Kontakt";
+        document.querySelector("#tekstdwudziestytrzeci").innerHTML = "Mój adres e-mail:";
+        document.querySelector("#tekstdwudziestyczwarty").innerHTML = "To tyle o mnie";
+        document.querySelector("#tekstdwudziestypiaty").innerHTML = "To tyle jeśli chodzi o mnie, zapraszam do zobaczenia moich projektów.";
+        document.querySelector("#tekstdwudziestyszosty").innerHTML = "Zobacz moje projekty";
+        document.querySelector("#tekstdwudziestysiodmy").innerHTML = "Moje projekty";
+        document.querySelector("#tekstdwudziestyosmy").innerHTML = "Naciśnji na projekt który chcesz zobaczyć";
+        document.querySelector("#teksttrzydziesty").innerHTML = "Jest to strona internetowa na której można w prosty sposób szyfrować i odszyfrowywać tekst oraz pliki, używając mojego autorskiego algorytmu szyfrowania.";
+        document.querySelector("#teksttrzydziestypierwszy").innerHTML = "Gra 3d Lasers";
+        document.querySelector("#teksttrzydziestydrugi").innerHTML = "To wciągająca gra logiczna, w której twoim zadaniem jest układanie laserów w odpowiedni sposób, aby aktywować różne mechanizmy i przechodzić do kolejnych poziomów.";
+        document.querySelector("#zdjecie1").removeAttribute("alt");
+        document.querySelector("#zdjecie1").setAttribute("alt", "konsola bez obudowy");
+        document.querySelector("#zdjecie2").removeAttribute("alt");
+        document.querySelector("#zdjecie2").setAttribute("alt", "konsola w obudowie");
+    }
+
+    function UstawJezykNaAngielski()
+    {
+        document.querySelector("#przyciskhamburgermenu").removeAttribute("aria-label");
+        document.querySelector("#przyciskhamburgermenu").setAttribute("aria-label", "See subpages and language options");
+        document.querySelector("#tekstpierwszy").innerHTML = "Subpages:";
+        document.querySelector("#tekstdrugi").innerHTML = "About me";
+        document.querySelector("#teksttrzeci").innerHTML = "My projects";
+        document.querySelector("#tekstczwarty").innerHTML = "Welcome to my website!";
+        document.querySelector("#tekstpiaty").innerHTML = "My name is Bartosz Świątecki, and I'm known online as kinghat";
+        document.querySelector("#tekstszosty").innerHTML = "About me";
+        document.querySelector("#tekstsiodmy").innerHTML = "My projects";
+        document.querySelector("#tekstosmy").innerHTML = "Welcome to my website!";
+        document.querySelector("#tekstdziewiaty").innerHTML = "My name is Bartosz Świątecki, and I'm known online as kinghat";
+        document.querySelector("#tekstdziesiaty").innerHTML = "About me";
+        document.querySelector("#tekstjedenasty").innerHTML = "My projects";
+        document.querySelector("#tekstdwunasty").innerHTML = "About me";
+        document.querySelector("#teksttrzynasty").innerHTML = "Welcome on my website, my name is Bartek. My programming journey with programming started long ago with microcontrollers, but now I enjoy web development the most. Besides coding, I like playing chess, I'm not a master, but I'm getting better.";
+        document.querySelector("#tekstczternasty").innerHTML = "This is where it all started";
+        document.querySelector("#tekstpietnasty").innerHTML = "You can browse this website because I learned programming, and my journey started with what you can see below, a retro gaming console based on an atmega328p microcontroller that I built at age of 14.";
+        document.querySelector("#tekstszesnasty").innerHTML = "Console without case";
+        document.querySelector("#tekstsiedemnasty").innerHTML = "Console with case";
+        document.querySelector("#tekstosiemnasty").innerHTML = "That's all about me";
+        document.querySelector("#tekstdziewietnasty").innerHTML = "That's all about me, feel free to check out my projects.";
+        document.querySelector("#tekstdwudziesty").innerHTML = "See my projects";
+        document.querySelector("#tekstdwudziestypierwszy").innerHTML = "My accounts on various platforms";
+        document.querySelector("#tekstdwudziestydrugi").innerHTML = "Contact";
+        document.querySelector("#tekstdwudziestytrzeci").innerHTML = "My email address:";
+        document.querySelector("#tekstdwudziestyczwarty").innerHTML = "That's all about me";
+        document.querySelector("#tekstdwudziestypiaty").innerHTML = "That's all about me, feel free to check out my projects.";
+        document.querySelector("#tekstdwudziestyszosty").innerHTML = "See my projects";
+        document.querySelector("#tekstdwudziestysiodmy").innerHTML = "My Projects";
+        document.querySelector("#tekstdwudziestyosmy").innerHTML = "Click on the project you want to see";
+        document.querySelector("#teksttrzydziesty").innerHTML = "This is a website where you can easily encrypt and decrypt text and files using my own encryption algorithm.";
+        document.querySelector("#teksttrzydziestypierwszy").innerHTML = "Game 3d Lasers";
+        document.querySelector("#teksttrzydziestydrugi").innerHTML = "Puzzle game in which your task is to arrange lasers in the right way to activate various mechanisms and advance to the next levels.";
+        document.querySelector("#zdjecie1").removeAttribute("alt");
+        document.querySelector("#zdjecie1").setAttribute("alt", "console without case");
+        document.querySelector("#zdjecie2").removeAttribute("alt");
+        document.querySelector("#zdjecie2").setAttribute("alt", "console in case");
+    }
+
+    if(localStorage.getItem("encherlang"))
+    {
+        if(localStorage.getItem("encherlang") === "pl")
+        {
+            UstawJezykNaPolski();
+        }
+        else
+        {
+            UstawJezykNaAngielski();
+        }
+    }
+    else
+    {
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+        let oknowyborujezyka = document.querySelector(".wyborekjezyka");
+        oknowyborujezyka.style.display = "flex";
+        oknowyborujezyka.style.flexDirection = "column";
+        oknowyborujezyka.style.alignItems = "center";
+    }
+
+    function OtworzOkienkoWyboruJezyczka()
+    {
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+        let oknowyborujezyka = document.querySelector(".wyborekjezyka");
+        let przezroczystosc = 0;
+        oknowyborujezyka.style.opacity = przezroczystosc;
+        oknowyborujezyka.style.display = "flex";
+        oknowyborujezyka.style.flexDirection = "column";
+        oknowyborujezyka.style.alignItems = "center";
+        document.querySelector("#przyciskhamburgermenu").removeAttribute("tabindex");
+        document.querySelector("#tekstdrugi").removeAttribute("tabindex");
+        document.querySelector("#teksttrzeci").removeAttribute("tabindex");
+        document.querySelector("#wymmwwdas").removeAttribute("tabindex");
+        document.querySelector("#tekstdziesiaty").removeAttribute("tabindex");
+        document.querySelector("#tekstjedenasty").removeAttribute("tabindex");
+        document.querySelector("#jiujii").removeAttribute("tabindex");
+        document.querySelector("#tekstszosty").removeAttribute("tabindex");
+        document.querySelector("#tekstsiodmy").removeAttribute("tabindex");
+        document.querySelector("#dwauhda").removeAttribute("tabindex");
+        document.querySelector("#wdwdwwdwdfr").removeAttribute("tabindex");
+        document.querySelector("#fjfjpwp").removeAttribute("tabindex");
+        document.querySelector("#zdjecie1").removeAttribute("tabindex");
+        document.querySelector("#zdjecie2").removeAttribute("tabindex");
+        document.querySelector("#tekstdwudziesty").removeAttribute("tabindex");
+        document.querySelector("#tekstdwudziestyszosty").removeAttribute("tabindex");
+        document.querySelector("#llllahwdhaw").setAttribute("tabindex", "-1");
+        document.querySelector("#hgtuhtuhgaaqq").setAttribute("tabindex", "-1");
+        window.scrollTo({top: 0,});
+
+        let funkcjaintervalpiaty = setInterval(function() 
+        {
+            if(przezroczystosc < 1)
+            {
+                przezroczystosc += 0.05;
+            }
+            if(przezroczystosc >= 1) 
+            {
+                przezroczystosc = 1;
+                clearInterval(funkcjaintervalpiaty);
+            }
+            oknowyborujezyka.style.opacity = przezroczystosc;
+        }, 10);
+    }
+
+    function NacisnietoPrzyciskPolski()
+    {
+        document.documentElement.style.overflow = "auto";
+        document.body.style.overflow = "auto";
+        let oknowyborujezyka = document.querySelector(".wyborekjezyka");
+        localStorage.setItem("encherlang", "pl")
+        UstawJezykNaPolski();
+        document.querySelector("#przyciskhamburgermenu").setAttribute("tabindex", "0");
+        document.querySelector("#tekstdrugi").setAttribute("tabindex", "0");
+        document.querySelector("#teksttrzeci").setAttribute("tabindex", "0");
+        document.querySelector("#wymmwwdas").setAttribute("tabindex", "0");
+        if(menuotwarte === false)
+        {
+            document.querySelector("#tekstdziesiaty").setAttribute("tabindex", "0");
+            document.querySelector("#tekstjedenasty").setAttribute("tabindex", "0");
+            document.querySelector("#jiujii").setAttribute("tabindex", "0");
+            document.querySelector("#tekstszosty").setAttribute("tabindex", "0");
+            document.querySelector("#tekstsiodmy").setAttribute("tabindex", "0");
+            document.querySelector("#dwauhda").setAttribute("tabindex", "0");
+            document.querySelector("#wdwdwwdwdfr").setAttribute("tabindex", "0");
+            document.querySelector("#fjfjpwp").setAttribute("tabindex", "0");
+            document.querySelector("#zdjecie1").setAttribute("tabindex", "0");
+            document.querySelector("#zdjecie2").setAttribute("tabindex", "0");
+            document.querySelector("#tekstdwudziesty").setAttribute("tabindex", "0");
+            document.querySelector("#tekstdwudziestyszosty").setAttribute("tabindex", "0");
+            document.querySelector("#llllahwdhaw").setAttribute("tabindex", "0");
+            document.querySelector("#hgtuhtuhgaaqq").setAttribute("tabindex", "0");
+        }
+        let przezroczystosc = 1;
+        oknowyborujezyka.style.opacity = przezroczystosc;
+
+        let funkcjaintervaltrzeci = setInterval(function() 
+        {
+        if(przezroczystosc > 0)
+        {
+            przezroczystosc -= 0.05;
+        }
+        if(przezroczystosc <= 0) 
+        {
+            przezroczystosc = 0;
+            oknowyborujezyka.style.display = 'none';
+            clearInterval(funkcjaintervaltrzeci);
+        }
+        oknowyborujezyka.style.opacity = przezroczystosc;
+        }, 10);
+    }
+
+    function NacisnietoPrzyciskAngielski()
+    {
+        document.documentElement.style.overflow = "auto";
+        document.body.style.overflow = "auto";
+        let oknowyborujezyka = document.querySelector(".wyborekjezyka");
+        localStorage.setItem("encherlang", "en")
+        UstawJezykNaAngielski();
+        document.querySelector("#przyciskhamburgermenu").setAttribute("tabindex", "0");
+        document.querySelector("#tekstdrugi").setAttribute("tabindex", "0");
+        document.querySelector("#teksttrzeci").setAttribute("tabindex", "0");
+        document.querySelector("#wymmwwdas").setAttribute("tabindex", "0");
+        if(menuotwarte === false)
+        {
+            document.querySelector("#tekstdziesiaty").setAttribute("tabindex", "0");
+            document.querySelector("#tekstjedenasty").setAttribute("tabindex", "0");
+            document.querySelector("#jiujii").setAttribute("tabindex", "0");
+            document.querySelector("#tekstszosty").setAttribute("tabindex", "0");
+            document.querySelector("#tekstsiodmy").setAttribute("tabindex", "0");
+            document.querySelector("#dwauhda").setAttribute("tabindex", "0");
+            document.querySelector("#wdwdwwdwdfr").setAttribute("tabindex", "0");
+            document.querySelector("#fjfjpwp").setAttribute("tabindex", "0");
+            document.querySelector("#zdjecie1").setAttribute("tabindex", "0");
+            document.querySelector("#zdjecie2").setAttribute("tabindex", "0");
+            document.querySelector("#tekstdwudziesty").setAttribute("tabindex", "0");
+            document.querySelector("#tekstdwudziestyszosty").setAttribute("tabindex", "0");
+            document.querySelector("#llllahwdhaw").setAttribute("tabindex", "0");
+            document.querySelector("#hgtuhtuhgaaqq").setAttribute("tabindex", "0");
+        }
+        let przezroczystosc = 1;
+        oknowyborujezyka.style.opacity = przezroczystosc;
+
+        let funkcjaintervalczwarty = setInterval(function() 
+        {
+        if(przezroczystosc > 0)
+        {
+            przezroczystosc -= 0.05;
+        }
+        if(przezroczystosc <= 0) 
+        {
+            przezroczystosc = 0;
+            oknowyborujezyka.style.display = 'none';
+            clearInterval(funkcjaintervalczwarty);
+        }
+        oknowyborujezyka.style.opacity = przezroczystosc;
+        }, 10);
+    }
+
+    function NacisnietioNaZdjeciePierwsze()
+    {
+        window.open("20250722_142328.jpg", "_blank");
+    }
+    
+    function NacisnietioNaZdjecieDrugie()
+    {
+        window.open("20250723_115215.jpg", "_blank");
+    }
+
+    function NacisnietoPrzyciskHamburgerMenu()
+    {
+        document.getElementById("przyciskhamburgermenu").style.pointerEvents = 'none';
+        if(menuotwarte == false) 
+        {
+            document.querySelector("#tekstdziesiaty").removeAttribute("tabindex");
+            document.querySelector("#tekstjedenasty").removeAttribute("tabindex");
+            document.querySelector("#jiujii").removeAttribute("tabindex");
+            document.querySelector("#tekstszosty").removeAttribute("tabindex");
+            document.querySelector("#tekstsiodmy").removeAttribute("tabindex");
+            document.querySelector("#dwauhda").removeAttribute("tabindex");
+            document.querySelector("#wdwdwwdwdfr").removeAttribute("tabindex");
+            document.querySelector("#fjfjpwp").removeAttribute("tabindex");
+            document.querySelector("#zdjecie1").removeAttribute("tabindex");
+            document.querySelector("#zdjecie2").removeAttribute("tabindex");
+            document.querySelector("#tekstdwudziesty").removeAttribute("tabindex");
+            document.querySelector("#tekstdwudziestyszosty").removeAttribute("tabindex");
+            document.querySelector("#llllahwdhaw").setAttribute("tabindex", "-1");
+            document.querySelector("#hgtuhtuhgaaqq").setAttribute("tabindex", "-1");
+            pasekhamburgerka[0].style.transform = "translateY(16px) rotate(45deg)";
+            pasekhamburgerka[1].style.opacity = "0";
+            pasekhamburgerka[2].style.transform = "translateY(-16px) rotate(-45deg)";
+            kontener.style.webkitFilter = 'blur(5px)';
+            kontener.style.filter = 'blur(5px)';
+            kontener.style.pointerEvents = 'none';
+            kontener.style.userSelect = "none";
+            kontener.style.webkitUserSelect = "none";
+            kontener.style.MozUserSelect = "none";
+            kontener.style.msUserSelect = "none";
+            document.body.style.overflow = "hidden";
+            document.documentElement.style.overflow = "hidden";
+            menu.style.opacity = 0;
+            menu.style.display = 'flex';
+            menu.style.flexDirection = 'column';
+            menu.style.alignItems = 'center';
+
+            let przezroczystosc = 0;
+
+            let funkcjainterval = setInterval(function() 
+            {
+                if(przezroczystosc < 1)
+                {
+                    przezroczystosc += 0.05;
+                }
+                if(przezroczystosc >= 1) 
+                {
+                    przezroczystosc = 1;
+                    clearInterval(funkcjainterval);
+                    document.getElementById("przyciskhamburgermenu").style.pointerEvents = 'auto';
+                }
+                menu.style.opacity = przezroczystosc;
+            }, 10);
+            menuotwarte = true;
+        } 
+        else 
+        {
+            document.querySelector("#tekstdziesiaty").setAttribute("tabindex", "0");
+            document.querySelector("#tekstjedenasty").setAttribute("tabindex", "0");
+            document.querySelector("#jiujii").setAttribute("tabindex", "0");
+            document.querySelector("#tekstszosty").setAttribute("tabindex", "0");
+            document.querySelector("#tekstsiodmy").setAttribute("tabindex", "0");
+            document.querySelector("#dwauhda").setAttribute("tabindex", "0");
+            document.querySelector("#wdwdwwdwdfr").setAttribute("tabindex", "0");
+            document.querySelector("#fjfjpwp").setAttribute("tabindex", "0");
+            document.querySelector("#zdjecie1").setAttribute("tabindex", "0");
+            document.querySelector("#zdjecie2").setAttribute("tabindex", "0");
+            document.querySelector("#tekstdwudziesty").setAttribute("tabindex", "0");
+            document.querySelector("#tekstdwudziestyszosty").setAttribute("tabindex", "0");
+            document.querySelector("#llllahwdhaw").setAttribute("tabindex", "0");
+            document.querySelector("#hgtuhtuhgaaqq").setAttribute("tabindex", "0");
+            pasekhamburgerka[0].style.transform = "translateY(0) rotate(0)";
+            pasekhamburgerka[1].style.opacity = "1";
+            pasekhamburgerka[2].style.transform = "translateY(0) rotate(0)";
+            kontener.style.webkitFilter = '';
+            kontener.style.filter = '';
+            kontener.style.pointerEvents = '';
+            kontener.style.userSelect = "text";
+            kontener.style.webkitUserSelect = "text";
+            kontener.style.MozUserSelect = "text";
+            kontener.style.msUserSelect = "text";
+            document.body.style.overflow = "auto";
+            document.documentElement.style.overflow = "auto";
+            let przezroczystosc = 1;
+            menu.style.opacity = przezroczystosc;
+
+            let funkcjaintervaldrugi = setInterval(function() 
+            {
+                if(przezroczystosc > 0)
+                {
+                    przezroczystosc -= 0.05;
+                }
+                if(przezroczystosc <= 0) 
+                {
+                    przezroczystosc = 0;
+                    menu.style.display = 'none';
+                    clearInterval(funkcjaintervaldrugi);
+                    document.getElementById("przyciskhamburgermenu").style.pointerEvents = 'auto';
+                }
+                menu.style.opacity = przezroczystosc;
+            }, 10);
+            menuotwarte = false;
+        }
+    }
+
+    function SprawdzKolor() {
+        let kolor = window.getComputedStyle(obiekt).backgroundColor
+        if(kolor === 'rgba(27, 27, 27, 0)') {
+            menu.style.display = 'none'
+            pasekhamburgerka[0].style.transform = "translateY(0) rotate(0)";
+            pasekhamburgerka[1].style.opacity = "1";
+            pasekhamburgerka[2].style.transform = "translateY(0) rotate(0)";
+            kontener.style.webkitFilter = '';
+            kontener.style.filter = '';
+            kontener.style.pointerEvents = '';
+            document.body.style.overflow = "auto";
+            menuotwarte = false;
+        }
+    }
+
+    window.addEventListener("resize", SprawdzKolor);
+
+    document.querySelectorAll("[tabindex]").forEach(function(fsuoefssss) {
+        fsuoefssss.addEventListener("keydown", function(feef) {
+            if(feef.key === 'Enter') {
+            fsuoefssss.onclick && fsuoefssss.onclick();
+            feef.preventDefault();
+            }
+        });
+    });
+</script>
+</body>
+</html>
